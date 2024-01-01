@@ -20,7 +20,7 @@
 
 - name: print the count
   ansible.builtin.debug:
-     msg: "entries count: {{entries_count}}"
+     msg: "entries count: {{products_count}}"
 
 - name: "load catalogue data"
   ansible.builtin.shell: "mongo --host mongo.balajibigdatadevops.online < /app/schema/{{component}}.js"
