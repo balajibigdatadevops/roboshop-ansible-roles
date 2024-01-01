@@ -1,4 +1,4 @@
-  - name: disabld nodejs and enable nodejs:18
+  - name: disable nodejs and enable nodejs:18
     ansible.builtin.shell: dnf module disable nodejs -y;dnf module enable nodejs:18 -y
  
   - name: install nodejs
@@ -6,7 +6,7 @@
       name: nodejs
       state: present
 
-  - name: install depdencies
+  - name: install nodejs depedencies
     ansible.builtin.command: npm install
     args:
       chdir: /app
