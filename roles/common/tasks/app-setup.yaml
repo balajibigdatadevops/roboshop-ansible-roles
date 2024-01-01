@@ -1,25 +1,25 @@
  - name: create roboshop user
-    ansible.builtin.user: 
-       name: roboshop
+   ansible.builtin.user: 
+     name: roboshop
   
  - name: recursively remove app directory
-    ansible.builtin.file:
-      path: /app
-      state: absent
+   ansible.builtin.file:
+     path: /app
+     state: absent
        
  - name: create app directory
-    ansible.builtin.file:
-      path: /app
-      state: directory
+   ansible.builtin.file:
+     path: /app
+     state: directory
   
  - name: "download {{ component }} zip file"
-    ansible.builtin.get_url:
-      url: https://roboshop-builds.s3.amazonaws.com/{{ component }}.zip
-      dest: /tmp/{{ component }}.zip
+   ansible.builtin.get_url:
+     url: https://roboshop-builds.s3.amazonaws.com/{{ component }}.zip
+     dest: /tmp/{{ component }}.zip
 
  ##default unarchive look file in ansible machine, but our zip file present in remote server. so remote_src: yes option required.
  - name: "unzipping the {{ component }} file"
-    ansible.builtin.unarchive:
-      src: /tmp/{{ component }}.zip
-      dest: /app
-      remote_src: yes
+   ansible.builtin.unarchive:
+     src: /tmp/{{ component }}.zip
+     dest: /app
+     remote_src: yes
