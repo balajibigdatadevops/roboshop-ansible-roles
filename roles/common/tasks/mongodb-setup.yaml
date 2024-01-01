@@ -18,8 +18,8 @@
   register: users_count
   when: component == "user"
 
- - name: print the count
-   ansible.builtin.debug:
+- name: print the count
+  ansible.builtin.debug:
      msg: "entries count: {{entries_count}}"
 
 - name: "load catalogue data"
