@@ -1,1 +1,12 @@
 MONGODB_HOST: mongodb.balajibigdatadevops.online
+REDIS_HOST: redis.balajibigdatadevops.online
+MYSQL_HOST: mysql.balajibigdatadevops.online
+RABBITMQ_HOST: rabbitmq.balajibigdatadevops.online
+CATALOGUE_HOST: catalogue.balajibigdatadevops.online
+USER_HOST: user.balajibigdatadevops.online
+CART_HOST: cart.balajibigdatadevops.online
+SHIPPING_HOST: shipping.balajibigdatadevops.online
+PAYMENT_HOST: payment.balajibigdatadevops.online
+DISPATCH_HOST: dispatch.balajibigdatadevops.online
+
+
